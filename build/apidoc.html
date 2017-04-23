@@ -1,0 +1,961 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/barrysteyn/node-scrypt"
+
+    >scrypt (v6.0.3)</a>
+</h1>
+<h4>The scrypt crypto library for NodeJS</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scrypt">module scrypt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.hash">
+            function <span class="apidocSignatureSpan">scrypt.</span>hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.hashSync">
+            function <span class="apidocSignatureSpan">scrypt.</span>hashSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.kdf">
+            function <span class="apidocSignatureSpan">scrypt.</span>kdf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.kdfSync">
+            function <span class="apidocSignatureSpan">scrypt.</span>kdfSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.params">
+            function <span class="apidocSignatureSpan">scrypt.</span>params
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.paramsSync">
+            function <span class="apidocSignatureSpan">scrypt.</span>paramsSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.verifyKdf">
+            function <span class="apidocSignatureSpan">scrypt.</span>verifyKdf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.verifyKdfSync">
+            function <span class="apidocSignatureSpan">scrypt.</span>verifyKdfSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">scrypt.</span>index</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scrypt.index">module scrypt.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.hash">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.hashSync">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>hashSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.kdf">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>kdf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.kdfSync">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>kdfSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.params">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>params
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.paramsSync">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>paramsSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.verifyKdf">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>verifyKdf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scrypt.index.verifyKdfSync">
+            function <span class="apidocSignatureSpan">scrypt.index.</span>verifyKdfSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scrypt" id="apidoc.module.scrypt">module scrypt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.hash" id="apidoc.element.scrypt.hash">
+        function <span class="apidocSignatureSpan">scrypt.</span>hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 4, &#x22;At least four arguments are needed before the callback - the key to hash, the
+ scrypt params object, the output length of the hash and the salt&#x22;);
+
+  args = processHashArguments(args);
+
+  if (callback_index === undefined) {
+    //Promise
+    return new Promise(function(resolve, reject) {
+      scryptNative.hash(args[0], args[1], args[2], args[3], function(err, hash) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(hash);
+        }
+      });
+    });
+  } else {
+    // Normal async with callback
+    scryptNative.hash(args[0], args[1], args[2], args[3], args[4]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## hash
+**Note**: In previous versions, this was called *kdf*.
+
+This is the raw scrypt hash function.
+
+&#x3e;
+scrypt.hashSync &#x3c;br&#x3e;
+scrypt.<span class="apidocCodeKeywordSpan">hash</span>(key, paramsObject, output_length, salt, function(err, obj){})
+
+* key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be checked.
+* paramsObject - [REQUIRED] - parameters to control scrypt hashing (see params above).
+* output_length - [REQUIRED] - the length of the resulting hashed output.
+* salt - [REQUIRED] - a string (or buffer) used for salt. The string (or buffer) can be empty.
+* callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.hashSync" id="apidoc.element.scrypt.hashSync">
+        function <span class="apidocSignatureSpan">scrypt.</span>hashSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashSync = function () {
+  var args = processHashArguments(arguments);
+  return scryptNative.hashSync(args[0], args[1], args[2], args[3]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Test Vector 1
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var key = new Buffer(&#x22;&#x22;);
+
+//Synchronous
+var result = scrypt.<span class="apidocCodeKeywordSpan">hashSync</span>(key,{&#x22;N&#x22;:16,&#x22;r&#x22;:1,&#x22;p&#x22;:1},64
+,&#x22;&#x22;);
+console.log(result.toString(&#x22;hex&#x22;));
+
+//Asynchronous
+scrypt.hash(key, {&#x22;N&#x22;:16,&#x22;r&#x22;:1,&#x22;p&#x22;:1},64,&#x22;&#x22;, function(err, res) {
+  console.log(result.toString(&#x22;hex&#x22;));
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.kdf" id="apidoc.element.scrypt.kdf">
+        function <span class="apidocSignatureSpan">scrypt.</span>kdf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kdf = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 2, &#x22;At least two arguments are needed before the call back function - the key and
+ the Scrypt parameters object&#x22;)
+    , that = this;
+
+  args = processKDFArguments(args);
+
+  if (callback_index === undefined) { // promise
+    return new Promise(function(resolve, reject) {
+
+      // Get some async salt
+      Crypto.randomBytes(256, function(err, salt) {
+        if (err) reject(err);
+        else {
+          scryptNative.kdf(args[0], args[1], salt, function(err, kdfResult) {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(kdfResult);
+            }
+          });
+        }
+      });
+    });
+  } else { // Normal async with callback
+    Crypto.randomBytes(256, function(err, salt) {
+      // Normal async with callback
+      if (err) // Crypto.randomBytes err
+        args[2](err); // call callback with error
+      else
+        scryptNative.kdf(args[0], args[1], salt, args[2]);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+should be used for hashing and checking passwords as it incorporates salt as well
+as [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) into
+its format. It is based on a design by Colin Percival, the author of scrypt. The format
+can be seen [here](http://security.stackexchange.com/questions/88678/why-does-node-js-scrypt-function-use-hmac-this-way/91050#91050
+).
+
+&#x3e;
+  scrypt.kdfSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">kdf</span>(key, paramsObject, [function(err, obj){}])
+
+  * key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be hashed.
+  * paramsObject - [REQUIRED] - parameters to control scrypt hashing (see params above).
+  * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## verifyKdf
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.kdfSync" id="apidoc.element.scrypt.kdfSync">
+        function <span class="apidocSignatureSpan">scrypt.</span>kdfSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kdfSync = function () {
+  var args = processKDFArguments(arguments);
+  return scryptNative.kdfSync(args[0], args[1], Crypto.randomBytes(256));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var scryptParameters = scrypt.paramsSync(0.1);
+var key = new Buffer(&#x22;this is a key&#x22;); //could also be a string
+
+//Synchronous example that will output in hexidecimal encoding
+var kdfResult = scrypt.<span class="apidocCodeKeywordSpan">kdfSync</span>(key, scryptParameters); //should be wrapped in try catch
+, but leaving it out for brevity
+console.log(&#x22;Synchronous result: &#x22;+kdfResult.toString(&#x22;hex&#x22;));
+
+//Asynchronous example that expects key to be ascii encoded
+scrypt.kdf(&#x22;ascii encoded key&#x22;, {N: 1, r:1, p:1}, function(err, result){
+  //Note how scrypt parameters was passed as a JSON object
+  console.log(&#x22;Asynchronous result: &#x22;+result.toString(&#x22;base64&#x22;));
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.params" id="apidoc.element.scrypt.params">
+        function <span class="apidocSignatureSpan">scrypt.</span>params
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 1, &#x22;At least one argument is needed before the callback - the maxtime&#x22;);
+
+  if (callback_index === undefined) {
+    // Promise
+    return new Promise(function(resolve, reject) {
+      args = processParamsArguments(args);
+      scryptNative.params(args[0], args[1], args[2],  Os.totalmem(), function(err, params) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(params);
+        }
+      });
+    })
+  } else {
+    // Normal async with callback
+
+    // If not using promise (so using callback),
+    // remove callback function from args and
+    // put it in it&#x27;s own variable. This allows
+    // sync check to be used (DRY)
+    var callback = args[callback_index];
+    delete args[callback_index];
+    args = processParamsArguments(args);
+    args[3] = callback;
+    scryptNative.params(args[0], args[1], args[2],  Os.totalmem(), args[3]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# API
+
+## params
+Translates human understandable parameters to scrypt&#x27;s internal parameters.
+
+&#x3e;
+  scrypt.paramsSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">params</span>(maxtime, [maxmem, [max_memfrac]], [function(err, obj) {}])
+
+  * maxtime - [REQUIRED] - a decimal (double) representing the maximum amount of time in seconds scrypt will spend when computing
+ the derived key.
+  * maxmem - [OPTIONAL] - an integer, specifying the maximum number of bytes of RAM used when computing the derived encryption key
+. If not present, will default to 0.
+  * maxmemfrac - [OPTIONAL only if maxmem is present] - a double value between 0.0 and 1.0, representing the fraction (normalized
+ percentage value) of the available RAM used when computing the derived key. If not present, will default to 0.5.
+  * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## kdf
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.paramsSync" id="apidoc.element.scrypt.paramsSync">
+        function <span class="apidocSignatureSpan">scrypt.</span>paramsSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paramsSync = function () {
+  var args = processParamsArguments(arguments);
+  return scryptNative.paramsSync(args[0], args[1], args[2], Os.totalmem());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+
+//Synchronous
+try {
+  //Uses 0.1 for maxtime, and default values maxmem and maxmemfrac
+  var scryptParameters = scrypt.<span class="apidocCodeKeywordSpan">paramsSync</span>(0.1);
+  console.log(scryptParameters);
+} catch(err) {
+  //handle error
+}
+
+//Asynchronous with callback
+scrypt.params(0.1, function(err, scryptParameters) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.verifyKdf" id="apidoc.element.scrypt.verifyKdf">
+        function <span class="apidocSignatureSpan">scrypt.</span>verifyKdf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyKdf = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 2, &#x22;At least two arguments are needed before the callback function - the KDF and
+ the key&#x22;);
+
+  if (callback_index === undefined) {
+    // Promise
+    return new Promise(function(resolve, reject) {
+      args = processVerifyArguments(args);
+      scryptNative.verify(args[0], args[1], function(err, match) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(match);
+        }
+      });
+    })
+  } else {
+    // Normal async with callback
+    args = processVerifyArguments(args);
+    scryptNative.verify(args[0], args[1], args[2]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## verifyKdf
+
+Checks if a key (password) matches a kdf.
+
+&#x3e;
+  scrypt.verifyKdfSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">verifyKdf</span>(kdf, key, [function(err, result){}])
+
+ * kdf [REQUIRED] - see kdf above.
+ * key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be checked.
+ * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## hash
+**Note**: In previous versions, this was called *kdf*.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.verifyKdfSync" id="apidoc.element.scrypt.verifyKdfSync">
+        function <span class="apidocSignatureSpan">scrypt.</span>verifyKdfSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyKdfSync = function () {
+  var args = processVerifyArguments(arguments);
+  return scryptNative.verifySync(args[0], args[1]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var scryptParameters = scrypt.paramsSync(0.1);
+var kdfResult = scrypt.kdfSync(&#x22;password&#x22;, scryptParameters);
+
+//Synchronous
+scrypt.<span class="apidocCodeKeywordSpan">verifyKdfSync</span>(kdfResult, &#x22;password&#x22;); // returns true
+scrypt.verifyKdfSync(kdfResult, &#x22;incorrect password&#x22;); // returns false
+
+//Asynchronous
+scrypt.verifyKdf(kdfResult, new Buffer(&#x22;password&#x22;), function(err, result) {
+  //result will be true
+});
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scrypt.index" id="apidoc.module.scrypt.index">module scrypt.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.hash" id="apidoc.element.scrypt.index.hash">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hash = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 4, &#x22;At least four arguments are needed before the callback - the key to hash, the
+ scrypt params object, the output length of the hash and the salt&#x22;);
+
+  args = processHashArguments(args);
+
+  if (callback_index === undefined) {
+    //Promise
+    return new Promise(function(resolve, reject) {
+      scryptNative.hash(args[0], args[1], args[2], args[3], function(err, hash) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(hash);
+        }
+      });
+    });
+  } else {
+    // Normal async with callback
+    scryptNative.hash(args[0], args[1], args[2], args[3], args[4]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## hash
+**Note**: In previous versions, this was called *kdf*.
+
+This is the raw scrypt hash function.
+
+&#x3e;
+scrypt.hashSync &#x3c;br&#x3e;
+scrypt.<span class="apidocCodeKeywordSpan">hash</span>(key, paramsObject, output_length, salt, function(err, obj){})
+
+* key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be checked.
+* paramsObject - [REQUIRED] - parameters to control scrypt hashing (see params above).
+* output_length - [REQUIRED] - the length of the resulting hashed output.
+* salt - [REQUIRED] - a string (or buffer) used for salt. The string (or buffer) can be empty.
+* callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.hashSync" id="apidoc.element.scrypt.index.hashSync">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>hashSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hashSync = function () {
+  var args = processHashArguments(arguments);
+  return scryptNative.hashSync(args[0], args[1], args[2], args[3]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Test Vector 1
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var key = new Buffer(&#x22;&#x22;);
+
+//Synchronous
+var result = scrypt.<span class="apidocCodeKeywordSpan">hashSync</span>(key,{&#x22;N&#x22;:16,&#x22;r&#x22;:1,&#x22;p&#x22;:1},64
+,&#x22;&#x22;);
+console.log(result.toString(&#x22;hex&#x22;));
+
+//Asynchronous
+scrypt.hash(key, {&#x22;N&#x22;:16,&#x22;r&#x22;:1,&#x22;p&#x22;:1},64,&#x22;&#x22;, function(err, res) {
+  console.log(result.toString(&#x22;hex&#x22;));
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.kdf" id="apidoc.element.scrypt.index.kdf">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>kdf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kdf = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 2, &#x22;At least two arguments are needed before the call back function - the key and
+ the Scrypt parameters object&#x22;)
+    , that = this;
+
+  args = processKDFArguments(args);
+
+  if (callback_index === undefined) { // promise
+    return new Promise(function(resolve, reject) {
+
+      // Get some async salt
+      Crypto.randomBytes(256, function(err, salt) {
+        if (err) reject(err);
+        else {
+          scryptNative.kdf(args[0], args[1], salt, function(err, kdfResult) {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(kdfResult);
+            }
+          });
+        }
+      });
+    });
+  } else { // Normal async with callback
+    Crypto.randomBytes(256, function(err, salt) {
+      // Normal async with callback
+      if (err) // Crypto.randomBytes err
+        args[2](err); // call callback with error
+      else
+        scryptNative.kdf(args[0], args[1], salt, args[2]);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+should be used for hashing and checking passwords as it incorporates salt as well
+as [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) into
+its format. It is based on a design by Colin Percival, the author of scrypt. The format
+can be seen [here](http://security.stackexchange.com/questions/88678/why-does-node-js-scrypt-function-use-hmac-this-way/91050#91050
+).
+
+&#x3e;
+  scrypt.kdfSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">kdf</span>(key, paramsObject, [function(err, obj){}])
+
+  * key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be hashed.
+  * paramsObject - [REQUIRED] - parameters to control scrypt hashing (see params above).
+  * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## verifyKdf
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.kdfSync" id="apidoc.element.scrypt.index.kdfSync">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>kdfSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kdfSync = function () {
+  var args = processKDFArguments(arguments);
+  return scryptNative.kdfSync(args[0], args[1], Crypto.randomBytes(256));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var scryptParameters = scrypt.paramsSync(0.1);
+var key = new Buffer(&#x22;this is a key&#x22;); //could also be a string
+
+//Synchronous example that will output in hexidecimal encoding
+var kdfResult = scrypt.<span class="apidocCodeKeywordSpan">kdfSync</span>(key, scryptParameters); //should be wrapped in try catch
+, but leaving it out for brevity
+console.log(&#x22;Synchronous result: &#x22;+kdfResult.toString(&#x22;hex&#x22;));
+
+//Asynchronous example that expects key to be ascii encoded
+scrypt.kdf(&#x22;ascii encoded key&#x22;, {N: 1, r:1, p:1}, function(err, result){
+  //Note how scrypt parameters was passed as a JSON object
+  console.log(&#x22;Asynchronous result: &#x22;+result.toString(&#x22;base64&#x22;));
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.params" id="apidoc.element.scrypt.index.params">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>params
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 1, &#x22;At least one argument is needed before the callback - the maxtime&#x22;);
+
+  if (callback_index === undefined) {
+    // Promise
+    return new Promise(function(resolve, reject) {
+      args = processParamsArguments(args);
+      scryptNative.params(args[0], args[1], args[2],  Os.totalmem(), function(err, params) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(params);
+        }
+      });
+    })
+  } else {
+    // Normal async with callback
+
+    // If not using promise (so using callback),
+    // remove callback function from args and
+    // put it in it&#x27;s own variable. This allows
+    // sync check to be used (DRY)
+    var callback = args[callback_index];
+    delete args[callback_index];
+    args = processParamsArguments(args);
+    args[3] = callback;
+    scryptNative.params(args[0], args[1], args[2],  Os.totalmem(), args[3]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+# API
+
+## params
+Translates human understandable parameters to scrypt&#x27;s internal parameters.
+
+&#x3e;
+  scrypt.paramsSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">params</span>(maxtime, [maxmem, [max_memfrac]], [function(err, obj) {}])
+
+  * maxtime - [REQUIRED] - a decimal (double) representing the maximum amount of time in seconds scrypt will spend when computing
+ the derived key.
+  * maxmem - [OPTIONAL] - an integer, specifying the maximum number of bytes of RAM used when computing the derived encryption key
+. If not present, will default to 0.
+  * maxmemfrac - [OPTIONAL only if maxmem is present] - a double value between 0.0 and 1.0, representing the fraction (normalized
+ percentage value) of the available RAM used when computing the derived key. If not present, will default to 0.5.
+  * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## kdf
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.paramsSync" id="apidoc.element.scrypt.index.paramsSync">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>paramsSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paramsSync = function () {
+  var args = processParamsArguments(arguments);
+  return scryptNative.paramsSync(args[0], args[1], args[2], Os.totalmem());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+
+//Synchronous
+try {
+  //Uses 0.1 for maxtime, and default values maxmem and maxmemfrac
+  var scryptParameters = scrypt.<span class="apidocCodeKeywordSpan">paramsSync</span>(0.1);
+  console.log(scryptParameters);
+} catch(err) {
+  //handle error
+}
+
+//Asynchronous with callback
+scrypt.params(0.1, function(err, scryptParameters) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.verifyKdf" id="apidoc.element.scrypt.index.verifyKdf">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>verifyKdf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyKdf = function () {
+  var args = arguments
+    , callback_index = checkAsyncArguments(args, 2, &#x22;At least two arguments are needed before the callback function - the KDF and
+ the key&#x22;);
+
+  if (callback_index === undefined) {
+    // Promise
+    return new Promise(function(resolve, reject) {
+      args = processVerifyArguments(args);
+      scryptNative.verify(args[0], args[1], function(err, match) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(match);
+        }
+      });
+    })
+  } else {
+    // Normal async with callback
+    args = processVerifyArguments(args);
+    scryptNative.verify(args[0], args[1], args[2]);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## verifyKdf
+
+Checks if a key (password) matches a kdf.
+
+&#x3e;
+  scrypt.verifyKdfSync &#x3c;br&#x3e;
+  scrypt.<span class="apidocCodeKeywordSpan">verifyKdf</span>(kdf, key, [function(err, result){}])
+
+ * kdf [REQUIRED] - see kdf above.
+ * key - [REQUIRED] - a string (or buffer) representing the key (password) that is to be checked.
+ * callback_function - [OPTIONAL] - not applicable to synchronous function. If present in async function, then it will be treated
+ as a normal async callback. If not present, a Promise will be returned if ES6 promises are available. If not present and ES6 promises
+ are not present, a SyntaxError will be thrown.
+
+## hash
+**Note**: In previous versions, this was called *kdf*.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scrypt.index.verifyKdfSync" id="apidoc.element.scrypt.index.verifyKdfSync">
+        function <span class="apidocSignatureSpan">scrypt.index.</span>verifyKdfSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyKdfSync = function () {
+  var args = processVerifyArguments(arguments);
+  return scryptNative.verifySync(args[0], args[1]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```JavaScript
+var scrypt = require(&#x22;scrypt&#x22;);
+var scryptParameters = scrypt.paramsSync(0.1);
+var kdfResult = scrypt.kdfSync(&#x22;password&#x22;, scryptParameters);
+
+//Synchronous
+scrypt.<span class="apidocCodeKeywordSpan">verifyKdfSync</span>(kdfResult, &#x22;password&#x22;); // returns true
+scrypt.verifyKdfSync(kdfResult, &#x22;incorrect password&#x22;); // returns false
+
+//Asynchronous
+scrypt.verifyKdf(kdfResult, new Buffer(&#x22;password&#x22;), function(err, result) {
+  //result will be true
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
